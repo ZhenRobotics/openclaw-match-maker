@@ -1,0 +1,88 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openclaw-skill-matchmaker"
+version = "0.1.0"
+description = "Matchmaker - AI-powered dating match skill for OpenClaw - Intelligent relationship matching and dating guidance"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = [
+    "openclaw",
+    "skill",
+    "matchmaker",
+    "dating",
+    "relationships",
+    "compatibility",
+    "ai-matching",
+    "icebreaker",
+    "relationship-assessment",
+]
+authors = [
+    {name = "Justin Wang", email = "code@zhenrobot.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    # Utilities
+    "python-dateutil>=2.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.7.0",
+    "ipython>=8.12.0",
+]
+test = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ZhenRobotics/openclaw-match-maker"
+Documentation = "https://github.com/ZhenRobotics/openclaw-match-maker/blob/main/README.md"
+Repository = "https://github.com/ZhenRobotics/openclaw-match-maker"
+Issues = "https://github.com/ZhenRobotics/openclaw-match-maker/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["matchmaker"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "DTZ", "T20", "SIM", "RET"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"

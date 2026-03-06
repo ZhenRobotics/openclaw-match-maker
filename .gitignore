@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Node (legacy TypeScript files)
+node_modules/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.coverage
+htmlcov/
+
+# Build outputs
+*.tsbuildinfo
+dist/
+build/
+
+# Output files (可选，如果想忽略测试生成的文件)
+# output/
+
+# Data (sensitive)
+data/investors/*.private.json
+data/deals/*.private.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Documentation builds
+docs/_build/

@@ -1,0 +1,77 @@
+# ClawHub 忽略文件
+# 类似 .gitignore，指定不上传到 ClawHub 的文件
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Node (如果混合使用)
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+.cache/
+
+# Output files (测试生成的)
+output/
+
+# Documentation builds
+docs/_build/
+
+# Large data files (可选)
+# *.pdf
+# *.csv
+# *.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*_OLD*
+*_BACKUP*
